@@ -119,5 +119,11 @@
       }
     }
   },
-  "defaultProject": "caelumpic-seis"
+  "defaultProject": "caelumpic-seis",
+  "schematics": {
+    "@schematics/angular:component": {
+      "inlineStyle": true,
+      "inlineTemplate": true
+    } 
+  }
 }
