@@ -1,0 +1,21 @@
+<header class="jumbotron">
+    <h1 class="text-center">CaelumPic</h1>
+</header>
+<main class="container">
+    <div class="row mb-4">
+        <div class="col-sm-12">
+            <form class="input-group">
+                <span class="input-group-prepend">
+                    <a routerLink="/cadastro" class="btn btn-primary">Nova foto</a>
+                </span>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <painel *ngFor="let foto of listaFotos" titulo="{{foto.titulo}}" class="col-md-4 mb-4">
+            <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+        </painel>
+    </div>
+    <!-- <foto url="assets/img/horse.jpg" titulo="Cavalos"></foto>
+  <foto url="assets/img/unicorn.jpg" titulo="Unicórnio"></foto> -->
+</main>
