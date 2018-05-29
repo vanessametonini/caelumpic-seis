@@ -2,6 +2,8 @@
   <h1 class="text-center">CaelumPic</h1>
 </header>
 <main class="container">
-  <foto url="assets/img/horse.jpg" titulo="Cavalos"></foto>
-  <foto url="assets/img/unicorn.jpg" titulo="Unicórnio"></foto>
+
+  <foto *ngFor="let foto of listaFotos" url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+  <!-- <foto url="assets/img/horse.jpg" titulo="Cavalos"></foto>
+  <foto url="assets/img/unicorn.jpg" titulo="Unicórnio"></foto> -->
 </main>
