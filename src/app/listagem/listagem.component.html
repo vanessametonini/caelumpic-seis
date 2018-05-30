@@ -2,6 +2,11 @@
     <h1 class="text-center">CaelumPic</h1>
 </header>
 <main class="container">
+    <div class="row" *ngIf="mensagem">
+        <div class="col-sm-12">
+            <mensagem tipo="success">{{mensagem}}</mensagem>
+        </div>
+    </div>
     <div class="row mb-4">
         <div class="col-sm-12">
             <form class="input-group">

@@ -2,6 +2,11 @@
     <h1 class="text-center">Cadastrar Fotos</h1>
 </header>
 <main class="container">
+    <div class="row" *ngIf="mensagem">
+        <div class="col-sm-12">
+            <mensagem tipo="success">{{mensagem}}</mensagem>
+        </div>
+    </div>
     <section class="row">
         <form class="col-sm-7" (ngSubmit)="salvar()">
             <div class="form-group">
@@ -22,7 +27,7 @@
             </button>
         </form>
         <aside class="col-sm-5">
-            <painel titulo="{{foto.titulo}}">
+            <painel titulo="{{foto.titulo}}" *ngIf="foto.url">
                 <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
             </painel>
         </aside>

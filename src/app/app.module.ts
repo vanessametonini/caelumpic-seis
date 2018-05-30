@@ -9,12 +9,14 @@ import { PainelModule } from './painel/painel.module';
 import { ListagemComponent } from './listagem/listagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ModuloRoteamento } from "./app.routes";
+import { MensagemComponent } from './mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListagemComponent,
-    CadastroComponent
+    CadastroComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,

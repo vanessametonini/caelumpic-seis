@@ -11,6 +11,7 @@ import { FotoComponent } from '../foto/foto.component';
 export class ListagemComponent implements OnInit {
 
   listaFotos = []
+  mensagem
 
   constructor(private servico: FotoService) {}
   
@@ -29,7 +30,11 @@ export class ListagemComponent implements OnInit {
                 .subscribe(
                   () => {
                     this.listaFotos = this.listaFotos.filter( fotoLista => fotoLista != foto)
-                    console.log(`${foto.titulo} apagada com sucesso`)
+                    this.mensagem = `${foto.titulo} apagada com sucesso`
+
+                    setTimeout(() => {
+                      this.mensagem = ''
+                    }, 2000);
                   }
                   ,erro => console.log(erro)
                 )
