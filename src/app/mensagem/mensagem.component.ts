@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MensagemComponent implements OnInit {
 
   @Input() tipo = 'light'
+  @Input() texto = ''
 
   constructor() { }
 

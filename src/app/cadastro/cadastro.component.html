@@ -2,9 +2,9 @@
     <h1 class="text-center">Cadastrar Fotos</h1>
 </header>
 <main class="container">
-    <div class="row" *ngIf="mensagem">
+    <div class="row" *ngIf="mensagem.texto">
         <div class="col-sm-12">
-            <mensagem tipo="success">{{mensagem}}</mensagem>
+            <mensagem tipo="{{mensagem.tipo}}">{{mensagem.texto}}</mensagem>
         </div>
     </div>
     <section class="row">
