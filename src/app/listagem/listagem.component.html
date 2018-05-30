@@ -14,6 +14,7 @@
     <div class="row">
         <painel *ngFor="let foto of listaFotos" titulo="{{foto.titulo}}" class="col-md-4 mb-4">
             <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+            <button (click)="remover(foto)" class="btn btn-danger">Remover</button>
         </painel>
     </div>
     <!-- <foto url="assets/img/horse.jpg" titulo="Cavalos"></foto>
