@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { FotoModule } from "./foto/foto.module";
@@ -20,7 +21,8 @@ import { ModuloRoteamento } from "./app.routes";
     HttpClientModule,
     FotoModule,
     PainelModule,
-    ModuloRoteamento
+    ModuloRoteamento,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

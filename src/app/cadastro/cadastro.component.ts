@@ -1,19 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { FotoComponent } from '../foto/foto.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'cadastro',
-  template: `
-    <p>
-      cadastro works!
-    </p>
-  `,
+  templateUrl: './cadastro.component.html' ,
   styles: []
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  foto = new FotoComponent()
 
-  ngOnInit() {
+  constructor(private conexaoApi: HttpClient) { }
+
+  ngOnInit() {}
+
+  salvar(){
+    
+    this.conexaoApi.post('http://localhost:3000/v1/fotos/',
+                            this.foto)
+                  .subscribe(
+                    () => console.log(`${this.foto.titulo} cadastrada com sucesso`)
+                    ,erro => console.log(erro)
+                  )
+    
   }
 
 }

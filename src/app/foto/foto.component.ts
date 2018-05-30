@@ -9,6 +9,7 @@ export class FotoComponent implements OnInit {
 
   @Input() url = ''
   @Input() titulo = ''
+          descricao = ''
 
   constructor() { }
 
