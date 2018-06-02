@@ -10,13 +10,15 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ModuloRoteamento } from "./app.routes";
 import { MensagemComponent } from './mensagem/mensagem.component';
+import { FiltroPorTitulo } from "./listagem/filtroPorTitulo.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     ListagemComponent,
     CadastroComponent,
-    MensagemComponent
+    MensagemComponent,
+    FiltroPorTitulo
   ],
   imports: [
     BrowserModule,
